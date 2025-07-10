@@ -1,0 +1,49 @@
+[
+  {
+    "shop": "Ryans",
+    "baseUrl": "https://www.ryans.com/",
+    "products": {
+      "cpu": "https://www.ryans.com/category/desktop-component-processor",
+      "cooler": "https://www.ryans.com/category/desktop-component-cpu-cooler",
+      "motherboard": "https://www.ryans.com/category/desktop-component-motherboard",
+      "ram": "https://www.ryans.com/category/desktop-component-desktop-ram",
+      "ssd": "https://www.ryans.com/category/internal-ssd",
+      "hdd": "https://www.ryans.com/category/internal-hdd",
+      "psu": "https://www.ryans.com/category/desktop-component-power-supply",
+      "case": "https://www.ryans.com/category/desktop-component-casing",
+      "gpu": "https://www.ryans.com/category/desktop-component-graphics-card"
+    }
+  },
+  {
+    "shop": "StarTech",
+    "baseUrl": "https://www.startech.com",
+    "products": {
+      "cpu": "https://www.startech.com.bd/component/processor",
+      "cooler": "https://www.startech.com.bd/component/CPU-Cooler",
+      "motherboard": "https://www.startech.com.bd/component/motherboard",
+      "ram": "https://www.startech.com.bd/component/ram",
+      "ssd": "https://www.startech.com.bd/ssd",
+      "hdd": "https://www.startech.com.bd/component/hard-disk-drive",
+      "psu": "https://www.startech.com.bd/component/power-supply",
+      "case": "https://www.startech.com.bd/component/casing",
+      "gpu": "https://www.startech.com.bd/component/graphics-card",
+      "monitor": "https://www.startech.com.bd/monitor"
+    }
+  },
+
+  {
+    "shop": "TechLandBD",
+    "baseUrl": "https://www.techlandbd.com/",
+    "products": {
+      "cpu": "https://www.techlandbd.com/pc-components/processor",
+      "cooler": "https://www.techlandbd.com/pc-components/cpu-cooler",
+      "motherboard": "https://www.techlandbd.com/pc-components/motherboard",
+      "ram": "https://www.techlandbd.com/pc-components/shop-desktop-ram",
+      "ssd": "https://www.techlandbd.com/pc-components/solid-state-drive",
+      "hdd": "https://www.techlandbd.com/pc-components/hard-disk-drive",
+      "psu": "https://www.techlandbd.com/pc-components/power-supply",
+      "case": "https://www.techlandbd.com/pc-components/computer-case",
+      "gpu": "https://www.techlandbd.com/pc-components/graphics-card"
+    }
+  }
+]
