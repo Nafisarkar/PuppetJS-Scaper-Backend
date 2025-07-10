@@ -2,7 +2,7 @@
 
 # 🛒 Neo Scrapy
 
-### _Bangladeshi Pc Product Scraping Tool_
+### _Pc Product Scraping Tool from be local retailer_
 
 [![Node.js](https://img.shields.io/badge/Node.js-18+-339933?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
 [![Puppeteer](https://img.shields.io/badge/Puppeteer-Latest-40B5A8?style=for-the-badge&logo=puppeteer&logoColor=white)](https://pptr.dev/)
@@ -29,7 +29,7 @@ _A focused web scraping solution for major Bangladeshi tech retailers_
 
 - **Multi-Site Support** - StarTech, TechLandBD, Ryans
 - **Built-in Selectors** - Pre-configured CSS selectors
-- **Price Intelligence** - Current, new, and old prices
+- **Price** - Current, new, and old prices
 - **Image Capture** - Product images with validation
 
 </td>
