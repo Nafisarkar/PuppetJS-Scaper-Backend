@@ -1,8 +1,8 @@
 <div align="center">
 
-# 🛒 Puppet-js Scraper
+# 🛒 Neo Scrapy
 
-### _Bangladeshi E-commerce Product Scraping Tool_
+### _Bangladeshi Pc Product Scraping Tool_
 
 [![Node.js](https://img.shields.io/badge/Node.js-18+-339933?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
 [![Puppeteer](https://img.shields.io/badge/Puppeteer-Latest-40B5A8?style=for-the-badge&logo=puppeteer&logoColor=white)](https://pptr.dev/)
@@ -10,6 +10,8 @@
 [![Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)]()
 
 _A focused web scraping solution for major Bangladeshi tech retailers_
+
+> **⚠️ DISCLAIMER**: This project is created for **research and educational purposes only**. Users are responsible for ensuring compliance with website terms of service and applicable laws. The developers do not endorse or encourage any unauthorized scraping activities.
 
 [Features](#-features) • [Quick Start](#-quick-start) • [Architecture](#-architecture) • [Configuration](#-configuration) • [Documentation](#-documentation)
 
@@ -117,13 +119,13 @@ node server.js
 
 📊 FINAL SUMMARY
 ================
-┌─────────────┬──────────┬──────────┬───────┬───────┬─────────┐
-│    Shop     │ Category │ Products │ Pages │ Links │ Status  │
-├─────────────┼──────────┼──────────┼───────┼───────┼─────────┤
-│ StarTech    │ gpu      │ 124      │ 5     │ 124   │ ✅ Success │
-│ Ryans       │ gpu      │ 89       │ 3     │ 89    │ ✅ Success │
-│ TechLandBD  │ gpu      │ 67       │ 2     │ 67    │ ✅ Success │
-└─────────────┴──────────┴──────────┴───────┴───────┴─────────┘
+┌─────────────┬──────────┬──────────┬───────┬───────┬────────────┐
+│    Shop     │ Category │ Products │ Pages │ Links │   Status   │
+├─────────────┼──────────┼──────────┼───────┼───────┼────────────┤
+│ StarTech    │ gpu      │ 124      │ 5     │ 124   │    Success │
+│ Ryans       │ gpu      │ 89       │ 3     │ 89    │    Success │
+│ TechLandBD  │ gpu      │ 67       │ 2     │ 67    │    Success │
+└─────────────┴──────────┴──────────┴───────┴───────┴──---───────┘
 ```
 
 ---
@@ -146,7 +148,7 @@ The project includes a pre-configured `config.json` with three major Bangladeshi
     }
   },
   {
-    "shop": "StarTech", 
+    "shop": "StarTech",
     "baseUrl": "https://www.startech.com",
     "products": {
       "cpu": "https://www.startech.com.bd/component/processor",
@@ -178,7 +180,7 @@ if (shop === "StarTech") {
 } else if (shop === "Ryans") {
   GirdItemsSelector = ".product-tile.product";
   linkItemsSelector = ".product-tile.product a";
-  // ... more selectors  
+  // ... more selectors
 }
 ```
 
@@ -191,14 +193,16 @@ if (shop === "StarTech") {
 ### Current Architecture
 
 The scraper is currently built as a monolithic application in `server.js` with:
+
 - Embedded CSS selectors for each supported site
-- Built-in pagination logic 
+- Built-in pagination logic
 - Integrated data extraction and file output
 - Progress tracking with CLI progress bars
 
 ### Adding New Sites
 
 1. **Add Site Configuration**
+
    ```json
    // Add to config.json
    {
@@ -253,7 +257,7 @@ node server.js
   "category": "gpu",
   "title": "NVIDIA RTX 4090",
   "price": "125000",
-  "newPrice": "120000", 
+  "newPrice": "120000",
   "oldPrice": "130000",
   "image": "https://example.com/image.jpg",
   "link": "https://example.com/product"
@@ -268,6 +272,7 @@ node server.js
 ### Dependencies
 
 The project uses these key packages:
+
 - `puppeteer-extra` & `puppeteer-core` - Web scraping engine
 - `puppeteer-extra-plugin-stealth` - Anti-detection
 - `cli-progress` - Progress bars
@@ -281,12 +286,14 @@ The project uses these key packages:
 ### Core Functions
 
 #### `scrapeAll(BASE_URL, shop, category)`
+
 ```javascript
 // Main scraping function in server.js
 await scrapeAll(productUrl, shop, category);
 ```
 
 #### `loadData(filePath)` & `saveData(filePath, data)`
+
 ```javascript
 // Utility functions in utils.js
 import { loadData, saveData } from "./utils.js";
@@ -295,6 +302,7 @@ await saveData("output.json", products);
 ```
 
 #### Built-in Progress Tracking
+
 ```javascript
 // CLI progress bars are automatically created and updated
 // Using cli-progress and console-table-printer packages
@@ -316,12 +324,12 @@ We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.
 
 ## 📈 Performance
 
-| Metric               | Value                  |
-| -------------------- | ---------------------- |
-| **Average Speed**    | 30-60 products/minute  |
-| **Memory Usage**     | ~150MB peak            |
-| **Success Rate**     | 95%+ with retry logic  |
-| **Supported Sites**  | 3 (StarTech, Ryans, TechLandBD) |
+| Metric                | Value                           |
+| --------------------- | ------------------------------- |
+| **Average Speed**     | 30-60 products/minute           |
+| **Memory Usage**      | ~150MB peak                     |
+| **Success Rate**      | 95%+ with retry logic           |
+| **Supported Vendors** | 3 (StarTech, Ryans, TechLandBD) |
 
 ---
 
@@ -332,11 +340,35 @@ We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.
 - **Network Idle Wait** - Waits for page load completion
 - **Chrome Integration** - Uses local Chrome installation
 
+> **🔬 Research Note**: Anti-detection features are implemented for educational purposes to understand web scraping techniques. Always use responsibly and in compliance with website policies.
+
 ---
 
 ## 📝 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## ⚖️ Legal & Ethical Use
+
+**IMPORTANT**: This tool is provided for **research and educational purposes only**.
+
+### Responsible Usage Guidelines:
+
+- ✅ **Educational Research**: Use for learning web scraping techniques
+- ✅ **Personal Price Comparison**: Compare prices for your own shopping decisions
+- ✅ **Academic Studies**: Research market trends and pricing patterns
+- ❌ **Commercial Exploitation**: Do not use for commercial gain without permission
+- ❌ **Excessive Requests**: Avoid overwhelming target websites with requests
+- ❌ **Terms Violation**: Always respect website terms of service
+
+### Legal Considerations:
+
+- Review and comply with each website's `robots.txt` and terms of service
+- Consider implementing rate limiting and respectful crawling practices
+- Obtain explicit permission before using scraped data commercially
+- Be aware of copyright and data protection laws in your jurisdiction
+
+**The developers of this project are not liable for any misuse or legal issues arising from the use of this software.**
 
 ---
 
@@ -346,12 +378,14 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Found this project helpful?** ⭐ Star us on GitHub!
 
+**📚 For Research & Educational Use Only**
+
 [Report Bug](https://github.com/yourusername/puppet-js/issues) •
 [Request Feature](https://github.com/yourusername/puppet-js/issues) •
 [Documentation](https://github.com/yourusername/puppet-js/wiki)
 
 ---
 
-_Made with ❤️ for the data extraction community_
+_Made with ❤️ for the research and education community_
 
 </div>
