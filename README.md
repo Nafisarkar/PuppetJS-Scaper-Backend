@@ -1,8 +1,8 @@
 <div align="center">
 
-# 🛒 Neo Scrapy
+![Project Indexify Banner](./assets/banner.webp)
 
-### _Pc Product Scraping Tool from be local retailer_
+### _Pc Product Scraping Tool for local retailers_
 
 [![Node.js](https://img.shields.io/badge/Node.js-18+-339933?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
 [![Puppeteer](https://img.shields.io/badge/Puppeteer-Latest-40B5A8?style=for-the-badge&logo=puppeteer&logoColor=white)](https://pptr.dev/)
@@ -39,7 +39,7 @@ _A focused web scraping solution for major Bangladeshi tech retailers_
 
 - **Stealth Mode** - Anti-detection technology
 - **Progress Tracking** - Real-time console progress
-- **Error Recovery** - Automatic pagination handling
+
 - **Memory Optimized** - Efficient resource usage
 
 </td>
@@ -110,7 +110,7 @@ npm install
 node server.js
 ```
 
-### Live Demo
+### Terminal Output Demo
 
 ```bash
 🌐 Scraping page 1: https://www.startech.com.bd/component/graphics-card?page=1
@@ -122,9 +122,9 @@ node server.js
 ┌─────────────┬──────────┬──────────┬───────┬───────┬────────────┐
 │    Shop     │ Category │ Products │ Pages │ Links │   Status   │
 ├─────────────┼──────────┼──────────┼───────┼───────┼────────────┤
-│ StarTech    │ gpu      │ 124      │ 5     │ 124   │   Success  │
-│ Ryans       │ gpu      │ 89       │ 3     │ 89    │   Success  │
-│ TechLandBD  │ gpu      │ 67       │ 2     │ 67    │   Success  │
+│ Poshop      │ gpu      │ 124      │ 5     │ 124   │   Success  │
+│ Bokshop     │ gpu      │ 89       │ 3     │ 89    │   Success  │
+│ Bingo       │ gpu      │ 67       │ 2     │ 67    │   Success  │
 └─────────────┴──────────┴──────────┴───────┴───────┴────────────┘
 ```
 
@@ -139,27 +139,12 @@ The project includes a pre-configured `config.json` with three major Bangladeshi
 ```json
 [
   {
-    "shop": "Ryans",
-    "baseUrl": "https://www.ryans.com/",
+    "shop": "*pokshop*",
+    "baseUrl": "https://www.pokshop.com/",
     "products": {
-      "cpu": "https://www.ryans.com/category/desktop-component-processor",
-      "gpu": "https://www.ryans.com/category/desktop-component-graphics-card",
-      "ram": "https://www.ryans.com/category/desktop-component-desktop-ram"
-    }
-  },
-  {
-    "shop": "StarTech",
-    "baseUrl": "https://www.startech.com",
-    "products": {
-      "cpu": "https://www.startech.com.bd/component/processor",
-      "gpu": "https://www.startech.com.bd/component/graphics-card"
-    }
-  },
-  {
-    "shop": "TechLandBD",
-    "baseUrl": "https://www.techlandbd.com/",
-    "products": {
-      "gpu": "https://www.techlandbd.com/pc-components/graphics-card"
+      "cpu": "https://www.pokshop.com/category/processor",
+      "gpu": "https://www.pokshop.com/category/graphics-card",
+      "ram": "https://www.pokshop.com/category/ram"
     }
   }
 ]
@@ -171,13 +156,13 @@ The CSS selectors are currently defined directly in `server.js` within the page 
 
 ```javascript
 // Current selector configuration in server.js
-if (shop === "StarTech") {
+if (shop === "pokshop") {
   GirdItemsSelector = ".p-item";
   linkItemsSelector = ".p-item-inner a";
   TitleSelector = ".p-item-name a";
   PriceSelector = ".p-item-price";
   // ... more selectors
-} else if (shop === "Ryans") {
+} else if (shop === "bokshop") {
   GirdItemsSelector = ".product-tile.product";
   linkItemsSelector = ".product-tile.product a";
   // ... more selectors
@@ -253,7 +238,7 @@ node server.js
 ```json
 {
   "id": "uuid-here",
-  "shop": "StarTech",
+  "shop": "Pokshop",
   "category": "gpu",
   "title": "NVIDIA RTX 4090",
   "price": "125000",
